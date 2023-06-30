@@ -1,7 +1,7 @@
 package ru.lobanov.todoapp.usecases
 
 import ru.lobanov.todoapp.repository.RetrofitRepository
-import ru.lobanov.todoapp.retrofitConnect.RetrofitConstants
+import ru.lobanov.todoapp.retrofit.RetrofitConstants
 
 
 class GetRevisionUseCase {

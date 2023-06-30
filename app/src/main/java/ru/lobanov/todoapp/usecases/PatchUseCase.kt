@@ -2,9 +2,9 @@ package ru.lobanov.todoapp.usecases
 
 import ru.lobanov.todoapp.database.TaskEntry
 import ru.lobanov.todoapp.repository.RetrofitRepository
-import ru.lobanov.todoapp.retrofitConnect.RetrofitConstants
-import ru.lobanov.todoapp.retrofitConnect.model.Todo
-import ru.lobanov.todoapp.retrofitConnect.model.TodoList
+import ru.lobanov.todoapp.retrofit.RetrofitConstants
+import ru.lobanov.todoapp.retrofit.model.Todo
+import ru.lobanov.todoapp.retrofit.model.TodoList
 
 
 class PatchUseCase {

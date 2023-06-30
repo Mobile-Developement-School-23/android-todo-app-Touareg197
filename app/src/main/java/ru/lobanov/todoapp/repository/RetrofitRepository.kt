@@ -1,10 +1,10 @@
 package ru.lobanov.todoapp.repository
 
 import retrofit2.Response
-import ru.lobanov.todoapp.retrofitConnect.RetrofitConstants
-import ru.lobanov.todoapp.retrofitConnect.api.RetrofitInstance.api
-import ru.lobanov.todoapp.retrofitConnect.model.Element
-import ru.lobanov.todoapp.retrofitConnect.model.TodoList
+import ru.lobanov.todoapp.retrofit.RetrofitConstants
+import ru.lobanov.todoapp.retrofit.api.RetrofitInstance.api
+import ru.lobanov.todoapp.retrofit.model.Element
+import ru.lobanov.todoapp.retrofit.model.TodoList
 
 
 class RetrofitRepository {

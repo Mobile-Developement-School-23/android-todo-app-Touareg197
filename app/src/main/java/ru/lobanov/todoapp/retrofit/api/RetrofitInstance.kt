@@ -1,6 +1,6 @@
-package ru.lobanov.todoapp.retrofitConnect.api
+package ru.lobanov.todoapp.retrofit.api
 
-import ru.lobanov.todoapp.retrofitConnect.RetrofitConstants.Companion.BASE_URL
+import ru.lobanov.todoapp.retrofit.RetrofitConstants.Companion.BASE_URL
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request

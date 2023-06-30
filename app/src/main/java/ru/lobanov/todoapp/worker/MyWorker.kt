@@ -8,9 +8,9 @@ import ru.lobanov.todoapp.database.TaskDatabase
 import ru.lobanov.todoapp.database.TaskEntry
 import ru.lobanov.todoapp.repository.DataBaseRepository
 import ru.lobanov.todoapp.repository.RetrofitRepository
-import ru.lobanov.todoapp.retrofitConnect.RetrofitConstants
-import ru.lobanov.todoapp.retrofitConnect.model.Todo
-import ru.lobanov.todoapp.retrofitConnect.model.TodoList
+import ru.lobanov.todoapp.retrofit.RetrofitConstants
+import ru.lobanov.todoapp.retrofit.model.Todo
+import ru.lobanov.todoapp.retrofit.model.TodoList
 
 
 class MyWorker(context: Context, parameters: WorkerParameters) :

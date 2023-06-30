@@ -1,4 +1,4 @@
-package ru.lobanov.todoapp.retrofitConnect.model
+package ru.lobanov.todoapp.retrofit.model
 
 import kotlin.collections.ArrayList
 

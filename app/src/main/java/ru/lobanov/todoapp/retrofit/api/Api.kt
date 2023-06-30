@@ -1,7 +1,7 @@
-package ru.lobanov.todoapp.retrofitConnect.api
+package ru.lobanov.todoapp.retrofit.api
 
-import ru.lobanov.todoapp.retrofitConnect.model.TodoList
-import ru.lobanov.todoapp.retrofitConnect.model.Element
+import ru.lobanov.todoapp.retrofit.model.TodoList
+import ru.lobanov.todoapp.retrofit.model.Element
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.DELETE

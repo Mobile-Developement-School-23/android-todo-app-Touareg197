@@ -5,9 +5,9 @@ import ru.lobanov.todoapp.database.TaskDatabase
 import ru.lobanov.todoapp.database.TaskEntry
 import ru.lobanov.todoapp.repository.DataBaseRepository
 import ru.lobanov.todoapp.repository.RetrofitRepository
-import ru.lobanov.todoapp.retrofitConnect.RetrofitConstants
-import ru.lobanov.todoapp.retrofitConnect.model.Element
-import ru.lobanov.todoapp.retrofitConnect.model.Todo
+import ru.lobanov.todoapp.retrofit.RetrofitConstants
+import ru.lobanov.todoapp.retrofit.model.Element
+import ru.lobanov.todoapp.retrofit.model.Todo
 
 
 class UpdateUseCases(application: Application) {

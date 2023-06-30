@@ -1,4 +1,4 @@
-package ru.lobanov.todoapp.retrofitConnect
+package ru.lobanov.todoapp.retrofit
 
 class RetrofitConstants {
     companion object {
