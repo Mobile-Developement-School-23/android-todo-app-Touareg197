@@ -1,20 +1,35 @@
 <resources>
     <string name="app_name">ToDo Application</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="to_do_list_fragment_label">ToDo List Fragment</string>
-    <string name="to_do_details_fragment_label">ToDo Details Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="my_deal">Мои дела</string>
-    <string name="performed">Выполнено - 0</string>
+    <string name="search">Search</string>
+    <string name="sort_by_high_priority">Sort by High Priority</string>
+    <string name="delete_all">Delete all</string>
+    <string name="enter_task">Enter Task</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string-array name="priorities">
+        <item>High Priority</item>
+        <item>Medium Priority</item>
+        <item>Low Priority</item>
+    </string-array>
+    <string name="loading">Loading..</string>
+    <string name="my_todos">Мои дела</string>
+    <string name="executed">Выполнено - %s</string>
+    <string name="no_internet">Нет связи с cервером. Будет показана локальная инфомация</string>
 
     <string name="importance">Важность</string>
     <string name="make_up">Сделать до</string>
     <string name="delete">Удалить</string>
     <string name="save">СОХРАНИТЬ</string>
-    <string name="my_todos">Мои дела</string>
+    <string name="error500">Извините проблемы на сервере</string>
+    <string name="error400">Неверный запрос к серверу</string>
+    <string name="noconnection2">Подключения все еще нет(</string>
+    <string name="noconnection">Отсутсвует подключение к интернету</string>
+    <string name="retry">Попробовать еще</string>
+    <string name="ok">ok</string>
+    <string name="important">important</string>
+    <string name="basic">basic</string>
+    <string name="low">low</string>
 
     <string-array name="importance_list">
         <item>Нет</item>
