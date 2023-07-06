@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
     id 'androidx.navigation.safeargs'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -97,5 +98,9 @@ dependencies {
     implementation("androidx.work:work-runtime-ktx:$work_version")
     // RxJava2 for WorkManager
     implementation("androidx.work:work-rxjava2:$work_version")
+
+    // Dagger Hilt
+    implementation 'com.google.dagger:hilt-android:2.42'
+    kapt 'com.google.dagger:hilt-android-compiler:2.42'
 
 }

@@ -22,8 +22,10 @@ import ru.lobanov.todoapp.databinding.FragmentToDoListBinding
 import ru.lobanov.todoapp.util.NetworkUtil
 import ru.lobanov.todoapp.viewmodel.TaskViewModel
 import com.google.android.material.snackbar.Snackbar
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class ToDoListFragment : Fragment() {
 
     private val viewModel: TaskViewModel by viewModels()

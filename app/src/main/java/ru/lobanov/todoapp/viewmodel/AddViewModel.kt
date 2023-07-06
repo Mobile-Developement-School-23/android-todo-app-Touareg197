@@ -10,9 +10,14 @@ import ru.lobanov.todoapp.usecases.InsertUseCases
 import ru.lobanov.todoapp.util.NetworkUtil
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 
-class AddViewModel(application: Application) : AndroidViewModel(application) {
+@HiltViewModel
+class AddViewModel @Inject constructor(
+    private val application: Application
+) : AndroidViewModel(application) {
 
     private val insertUseCases: InsertUseCases
     private val getListUsecases: GetListUsecases

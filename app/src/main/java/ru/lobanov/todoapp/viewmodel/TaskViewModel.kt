@@ -10,9 +10,14 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import ru.lobanov.todoapp.usecases.AllUseCasesRetrofit
 import ru.lobanov.todoapp.usecases.AllUseCasesRoom
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 
-class TaskViewModel(application: Application) : AndroidViewModel(application) {
+@HiltViewModel
+class TaskViewModel @Inject constructor(
+    private val application: Application
+) : AndroidViewModel(application) {
 
     private val allUseCasesRetrofit: AllUseCasesRetrofit
     private val allUseCasesRoom: AllUseCasesRoom

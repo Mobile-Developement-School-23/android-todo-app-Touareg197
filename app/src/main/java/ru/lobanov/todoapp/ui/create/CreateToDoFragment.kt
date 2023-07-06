@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import ru.lobanov.todoapp.R
 import ru.lobanov.todoapp.databinding.FragmentCreateToDoBinding
 import ru.lobanov.todoapp.viewmodel.AddViewModel
@@ -24,6 +25,7 @@ import java.util.Calendar
 import java.util.Locale
 
 
+@AndroidEntryPoint
 class CreateToDoFragment : Fragment() {
 
     private val viewModel: AddViewModel by viewModels()
