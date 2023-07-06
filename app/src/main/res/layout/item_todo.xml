@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="taskEntry"
+            type="ru.lobanov.todoapp.database.TaskEntry" />
+
+        <variable
+            name="clickListener"
+            type="ru.lobanov.todoapp.ui.todolist.TaskClickListener" />
+
+        <variable
+            name="doneClickListener"
+            type="ru.lobanov.todoapp.ui.todolist.DoneClickListener" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/row_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/back_secondary"
+        android:onClick="@{() -> clickListener.onClick(taskEntry)}"
+        android:orientation="horizontal"
+        android:paddingVertical="15dp"
+        android:paddingStart="20dp">
+
+        <ImageView
+            android:id="@+id/checked"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="3dp"
+            android:onClick="@{() -> doneClickListener.onClick(taskEntry)}"
+            android:src="@drawable/ic_unchecked"
+            app:setChecked="@{taskEntry.done}"
+            app:setdeadline="@{taskEntry.deadline}" />
+
+        <ImageView
+            android:id="@+id/important"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="3dp"
+            app:setPriority="@{taskEntry.importance}" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:maxLines="3"
+                android:text="@{taskEntry.text}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/Label_Primary"
+                android:textIsSelectable="false"
+                app:setCheckedText="@{taskEntry.done}" />
+
+            <TextView
+                android:id="@+id/dateTV"
+                style="@style/Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                app:setTimestamp="@{taskEntry.deadline}" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center|top"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:contentDescription="TODO"
+            android:src="@drawable/ic_info_outline" />
+    </LinearLayout>
+</layout>

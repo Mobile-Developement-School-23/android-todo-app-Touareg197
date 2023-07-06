@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorOne">#46b14e</color>
+    <color name="colorTwo">#dc793f</color>
+    <color name="colorThree">#3ea6c2</color>
+
+    <integer-array name="smooth">
+        <item>@color/colorOne</item>
+        <item>@color/colorTwo</item>
+        <item>@color/colorThree</item>
+    </integer-array>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue">#007AFF</color>
+    <color name="back_light">#F7F6F2</color>
+
+    <color name="back_secondary">#FFFFFFFF</color>
+    <color name="label_Tertiary">#4D000000</color>
+    <color name="Support_Separator">#4D000000</color>
+    <color name="Support_Overlay">#4D000000</color>
+    <color name="Label_Primary">#000000</color>
+    <color name="Label_Secondary">#99000000</color>
+    <color name="Label_Disable">#26000000</color>
+    <color name="Red">#FF3B30</color>
+    <color name="Green">#34C759</color>
+    <color name="Blue">#007AFF</color>
+    <color name="Gray">#8E8E93</color>
+    <color name="Gray_Light">#D1D1D6</color>
+
+    <color name="back_elevated">@color/white</color>
+
+    <color name="black_trans80">#33000000</color>
+    <color name="primary_500">#3F51B5</color>
+</resources>
