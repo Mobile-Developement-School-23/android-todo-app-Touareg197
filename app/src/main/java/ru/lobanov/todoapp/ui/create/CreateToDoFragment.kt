@@ -44,7 +44,6 @@ class CreateToDoFragment : Fragment() {
         closeClickListener()
         setDate()
         return binding.root
-
     }
 
     private fun setDate() {
@@ -94,15 +93,15 @@ class CreateToDoFragment : Fragment() {
 
             var id: Int = 0
             viewModel.getAllTasks.observe(viewLifecycleOwner) { it ->
-
                 it.forEach {
                     if (it.ids > id)
                         id = it.ids
                 }
-                id = if (it.isNotEmpty())
+                id = if (it.isNotEmpty()) {
                     id + 1
-                else
+                } else {
                     0
+                }
 
                 viewModel.insert(
                     titleStr,

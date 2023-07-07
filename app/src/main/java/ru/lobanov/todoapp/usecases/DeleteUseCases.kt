@@ -5,9 +5,12 @@ import ru.lobanov.todoapp.database.TaskDatabase
 import ru.lobanov.todoapp.database.TaskEntry
 import ru.lobanov.todoapp.repository.DataBaseRepository
 import ru.lobanov.todoapp.repository.RetrofitRepository
+import javax.inject.Inject
 
 
-class DeleteUseCases(application: Application) {
+class DeleteUseCases @Inject constructor(
+    private val application: Application
+) {
 
     private val toDoDao = TaskDatabase.getDatabase(application).toDoDao()
     private val repository: DataBaseRepository

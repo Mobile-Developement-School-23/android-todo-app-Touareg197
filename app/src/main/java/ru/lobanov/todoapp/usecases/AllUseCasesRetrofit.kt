@@ -2,11 +2,14 @@ package ru.lobanov.todoapp.usecases
 
 import android.app.Application
 import ru.lobanov.todoapp.database.TaskEntry
+import javax.inject.Inject
 
 
-class AllUseCasesRetrofit(application: Application) {
+class AllUseCasesRetrofit @Inject constructor(
+    private val application: Application
+) {
 
-    private val getListUseCases: GetListUsecases
+    private val getListUseCases: GetListUseCases
     private val getRevisionUseCase: GetRevisionUseCase
     private val deleteRepeatUseCase: DeleteRepeatUseCase
     private val insertUseCases: InsertUseCases
@@ -21,7 +24,7 @@ class AllUseCasesRetrofit(application: Application) {
         insertUseCases = InsertUseCases(application)
         deleteRepeatUseCase = DeleteRepeatUseCase(application)
         getRevisionUseCase = GetRevisionUseCase()
-        getListUseCases = GetListUsecases(application)
+        getListUseCases = GetListUseCases(application)
     }
 
     suspend fun getList() {
