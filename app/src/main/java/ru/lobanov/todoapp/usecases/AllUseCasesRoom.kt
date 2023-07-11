@@ -3,18 +3,21 @@ package ru.lobanov.todoapp.usecases
 import android.app.Application
 import androidx.lifecycle.LiveData
 import ru.lobanov.todoapp.database.TaskEntry
+import javax.inject.Inject
 
 
-class AllUseCasesRoom(application: Application) {
+class AllUseCasesRoom @Inject constructor(
+    private val application: Application
+) {
 
     private val deleteRepeatUseCase: DeleteRepeatUseCase
     private val insertUseCases: InsertUseCases
     private val updateUseCases: UpdateUseCases
     private val deleteUseCases: DeleteUseCases
-    private val getListUseCases: GetListUsecases
+    private val getListUseCases: GetListUseCases
 
     init {
-        getListUseCases = GetListUsecases(application)
+        getListUseCases = GetListUseCases(application)
         deleteUseCases = DeleteUseCases(application)
         updateUseCases = UpdateUseCases(application)
         insertUseCases = InsertUseCases(application)

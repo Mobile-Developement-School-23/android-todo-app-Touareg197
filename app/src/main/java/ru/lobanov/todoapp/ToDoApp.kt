@@ -3,11 +3,14 @@ package ru.lobanov.todoapp
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import dagger.hilt.android.HiltAndroidApp
+
 
 /**
  * Загатовка на будущее класса ToDoListApp,
  * где можно отслеживать жизненный цикл единственной в приложении Activity
  */
+@HiltAndroidApp
 class ToDoApp : Application() {
 
     override fun onCreate() {

@@ -8,9 +8,12 @@ import ru.lobanov.todoapp.repository.RetrofitRepository
 import ru.lobanov.todoapp.retrofit.RetrofitConstants
 import ru.lobanov.todoapp.retrofit.model.Element
 import ru.lobanov.todoapp.retrofit.model.Todo
+import javax.inject.Inject
 
 
-class UpdateUseCases(application: Application) {
+class UpdateUseCases @Inject constructor(
+    private val application: Application
+) {
 
     private val toDoDao = TaskDatabase.getDatabase(application).toDoDao()
     private val repository: DataBaseRepository

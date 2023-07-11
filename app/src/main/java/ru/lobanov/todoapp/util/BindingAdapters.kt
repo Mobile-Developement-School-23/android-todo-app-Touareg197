@@ -17,7 +17,6 @@ import java.util.Date
 @SuppressLint("SetTextI18n")
 @BindingAdapter("setPriority")
 fun setPriority(view: ImageView, priority: String) {
-
     when (priority) {
         "important" -> {
             view.setImageResource(R.drawable.ic_high)

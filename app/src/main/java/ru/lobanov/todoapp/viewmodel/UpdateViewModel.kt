@@ -9,9 +9,14 @@ import ru.lobanov.todoapp.usecases.UpdateUseCases
 import ru.lobanov.todoapp.util.NetworkUtil
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 
-class UpdateViewModel(application: Application) : AndroidViewModel(application) {
+@HiltViewModel
+class UpdateViewModel @Inject constructor(
+    private val application: Application
+) : AndroidViewModel(application) {
 
     private val updateUseCases: UpdateUseCases
     private val deleteUseCases: DeleteUseCases

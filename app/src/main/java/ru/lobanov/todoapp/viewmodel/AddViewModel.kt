@@ -5,21 +5,26 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import ru.lobanov.todoapp.database.TaskEntry
-import ru.lobanov.todoapp.usecases.GetListUsecases
+import ru.lobanov.todoapp.usecases.GetListUseCases
 import ru.lobanov.todoapp.usecases.InsertUseCases
 import ru.lobanov.todoapp.util.NetworkUtil
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 
-class AddViewModel(application: Application) : AndroidViewModel(application) {
+@HiltViewModel
+class AddViewModel @Inject constructor(
+    private val application: Application
+) : AndroidViewModel(application) {
 
     private val insertUseCases: InsertUseCases
-    private val getListUsecases: GetListUsecases
+    private val getListUsecases: GetListUseCases
     var getAllTasks: LiveData<List<TaskEntry>>
 
     init {
-        getListUsecases = GetListUsecases(application)
+        getListUsecases = GetListUseCases(application)
         insertUseCases = InsertUseCases(application)
         getAllTasks = getListUsecases.getList()
     }

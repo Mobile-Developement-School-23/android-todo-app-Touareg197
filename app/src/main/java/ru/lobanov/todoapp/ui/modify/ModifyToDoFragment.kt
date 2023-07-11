@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import ru.lobanov.todoapp.R
 import ru.lobanov.todoapp.databinding.FragmentModifyToDoBinding
 import ru.lobanov.todoapp.viewmodel.UpdateViewModel
@@ -27,6 +28,7 @@ import java.util.Date
 import java.util.Locale
 
 
+@AndroidEntryPoint
 class ModifyToDoFragment : Fragment() {
 
     private val viewModel: UpdateViewModel by viewModels()

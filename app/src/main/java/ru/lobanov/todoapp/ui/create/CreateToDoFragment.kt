@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import ru.lobanov.todoapp.R
 import ru.lobanov.todoapp.databinding.FragmentCreateToDoBinding
 import ru.lobanov.todoapp.viewmodel.AddViewModel
@@ -24,6 +25,7 @@ import java.util.Calendar
 import java.util.Locale
 
 
+@AndroidEntryPoint
 class CreateToDoFragment : Fragment() {
 
     private val viewModel: AddViewModel by viewModels()
@@ -42,7 +44,6 @@ class CreateToDoFragment : Fragment() {
         closeClickListener()
         setDate()
         return binding.root
-
     }
 
     private fun setDate() {
@@ -92,15 +93,15 @@ class CreateToDoFragment : Fragment() {
 
             var id: Int = 0
             viewModel.getAllTasks.observe(viewLifecycleOwner) { it ->
-
                 it.forEach {
                     if (it.ids > id)
                         id = it.ids
                 }
-                id = if (it.isNotEmpty())
+                id = if (it.isNotEmpty()) {
                     id + 1
-                else
+                } else {
                     0
+                }
 
                 viewModel.insert(
                     titleStr,
