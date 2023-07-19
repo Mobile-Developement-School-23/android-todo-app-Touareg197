@@ -59,6 +59,7 @@ class UpdateViewModel @Inject constructor(
             id = id,
             last_updated_by = toString
         )
+
         viewModelScope.launch(Dispatchers.IO) {
             updateUseCases.update(taskEntry)
             if (NetworkUtil.getConnectivityStatus(context = getApplication())) {
